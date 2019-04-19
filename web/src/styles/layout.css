@@ -1,7 +1,8 @@
+@import './fonts.css';
 @import './vars.css';
 
 html {
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'source-sans-pro', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: var(--font-base-size);
   line-height: var(--font-base-line-height);
 }

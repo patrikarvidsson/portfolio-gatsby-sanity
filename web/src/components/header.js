@@ -3,6 +3,9 @@ import React from 'react'
 import Icon from './icons'
 import { cn } from '../lib/helpers'
 
+import logo from '../images/logo.black.svg'
+import webring from '../images/icon.webring.svg'
+
 import styles from './header.module.css'
 
 const Header = ({ onHideNav, onShowNav, showNav, siteTitle }) => (
@@ -22,13 +25,18 @@ const Header = ({ onHideNav, onShowNav, showNav, siteTitle }) => (
             <Link to='/about/'>About</Link>
           </li>
           <li>
-            <Link to='/projects/'>Projects</Link>
+            <Link to='/portfolio/'>Portfolio</Link>
           </li>
           <li>
             <Link to='/blog/'>Blog</Link>
           </li>
           <li>
             <Link to='/contact/'>Contact</Link>
+          </li>
+          <li>
+            <a href="https://webring.xxiivv.com/">
+              <img src={webring} alt="Webring" />
+            </a>
           </li>
         </ul>
       </nav>

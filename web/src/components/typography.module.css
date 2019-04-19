@@ -9,9 +9,9 @@
   --font-small-size: calc(14 / var(--base-unit) * 1rem);
   --font-small-line-height: calc(18 / 14);
   --font-base-size: calc(var(--base-unit) / 16 * 100%);
-  --font-base-line-height: calc(22 / var(--base-unit));
+  --font-base-line-height: calc(26 / var(--base-unit));
   --font-large-size: calc(19 / var(--base-unit) * 1rem);
-  --font-large-line-height: calc(24 / 19);
+  --font-large-line-height: calc(28 / 19);
   --font-title3-size: calc(24 / var(--base-unit) * 1rem);
   --font-title3-line-height: calc(28 / 24);
   --font-title2-size: calc(32 / var(--base-unit) * 1rem);
@@ -89,7 +89,7 @@
 }
 
 .responsiveTitle1 {
-  font-weight: 900;
+  font-weight: 600;
   font-size: var(--font-title3-size);
   line-height: var(--font-title3-line-height);
   margin: 1rem 0 2rem;
@@ -106,10 +106,10 @@
 }
 
 .responsiveTitle2 {
-  font-weight: 900;
+  font-weight: 600;
   font-size: var(--font-large-size);
   line-height: var(--font-large-line-height);
-  margin: 1.5rem 0 0.5rem;
+  margin: 1.5rem 0 1.5rem;
 
   @media (--media-min-small) {
     font-size: var(--font-title3-size);
@@ -123,10 +123,10 @@
 }
 
 .responsiveTitle3 {
-  font-weight: 900;
+  font-weight: 600;
   font-size: var(--font-large-size);
   line-height: var(--font-large-line-height);
-  margin: 1rem 0 0.5rem;
+  margin: 1rem 0 1rem;
 
   @media (--media-min-small) {
     font-size: var(--font-large-size);
@@ -142,7 +142,7 @@
 .responsiveTitle4 {
   font-size: var(--font-base-size);
   line-height: var(--font-base-line-height);
-  margin: 1rem 0 0.5rem;
+  margin: 1rem 0 1rem;
 
   @media (--media-min-small) {
     font-size: var(--font-base-size);

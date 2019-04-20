@@ -42,6 +42,15 @@ export default () =>
             .title('Pages')
             .items([
               S.listItem()
+                .title('Index')
+                .child(
+                  S.editor()
+                    .id('indexPage')
+                    .schemaType('page')
+                    .documentId('index')
+                )
+                .icon(FaFileO),
+              S.listItem()
                 .title('About')
                 .child(
                   S.editor()

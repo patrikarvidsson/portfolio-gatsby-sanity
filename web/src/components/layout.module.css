@@ -1,6 +1,18 @@
 @import '../styles/media-queries.css';
 @import '../styles/vars.css';
 
+.introductionSection {
+  margin: 1rem 0 4rem;
+
+  @media (--media-min-medium) {
+    margin: 3rem 0 6rem;
+
+    @nest & h2 {
+      font-size: var(--font-title2-size);
+    }
+  }
+}
+
 .content {
   min-height: calc(100% - 73px - 152px);
 

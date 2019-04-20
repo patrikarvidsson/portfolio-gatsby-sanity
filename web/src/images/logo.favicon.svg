@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="46px" height="46px" viewBox="0 0 46 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>logo-favicon</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="100%" y1="100%" x2="0%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#0A77D9" offset="0%"></stop>
+            <stop stop-color="#003FA6" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-147.000000, -258.000000)">
+            <g id="logo-favicon-copy" transform="translate(147.000000, 258.000000)">
+                <rect id="Rectangle" fill="url(#linearGradient-1)" x="0" y="0" width="46" height="46" rx="2"></rect>
+                <path d="M29.0749873,28.4319789 L23.5888904,19.6724007 L19.6418795,25.3287731 L14.0978599,22.9726354 L23.5888904,9.02462862 L23.6054397,9 L42,37.9632537 L42,37.9714632 L5.97988606,28.3301629 C5.93334513,28.3177056 5.88933773,28.2972149 5.84984767,28.2696145 C5.6625595,28.1387152 5.61684726,27.8807733 5.74774653,27.6934852 L8.8181279,23.3004423 C8.91778573,23.1578537 9.09599443,23.0928368 9.26405975,23.1377502 L29.0749873,28.4319789 Z M9.22358522,30.3606646 L15.265623,31.5694041 L10.9455673,37.8217445 C10.8461232,37.9656682 10.6669063,38.0314923 10.497947,37.9861499 L5.30966136,36.593805 C5.25950998,36.5803462 5.21234033,36.557567 5.17061638,36.5266573 C4.9870115,36.3906399 4.9484342,36.1315349 5.08445157,35.94793 L9.22358522,30.3606646 Z" id="Combined-Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -93,7 +93,8 @@
   }
 
   @media (--media-min-small) {
-    display: block;
+    display: flex;
+    align-items: center;
 
     @nest & ul {
       list-style: none;
@@ -102,7 +103,7 @@
     }
 
     @nest & ul li a {
-      padding: 0.5rem;
+      padding: 0.5rem 0.8rem;
     }
   }
 }

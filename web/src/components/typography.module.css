@@ -18,6 +18,10 @@
   --font-title2-line-height: calc(36 / 32);
   --font-title1-size: calc(44 / var(--base-unit) * 1rem);
   --font-title1-line-height: calc(56 / 44);
+
+  /* Font family */
+  --sans: 'source-sans-pro';
+  --sans-serif: 'arno-pro-display';
 }
 
 
@@ -89,10 +93,11 @@
 }
 
 .responsiveTitle1 {
-  font-weight: 600;
+  font-weight: 700;
   font-size: var(--font-title3-size);
   line-height: var(--font-title3-line-height);
-  margin: 1rem 0 2rem;
+  font-family: var(--sans);
+  margin: 1rem 0 1.5rem;
 
   @media (--media-min-small) {
     font-size: var(--font-title2-size);
@@ -106,10 +111,11 @@
 }
 
 .responsiveTitle2 {
-  font-weight: 600;
+  font-weight: 700;
   font-size: var(--font-large-size);
   line-height: var(--font-large-line-height);
-  margin: 1.5rem 0 1.5rem;
+  font-family: var(--sans);
+  margin: 2rem 0 1rem;
 
   @media (--media-min-small) {
     font-size: var(--font-title3-size);
@@ -123,10 +129,11 @@
 }
 
 .responsiveTitle3 {
-  font-weight: 600;
+  font-weight: 700;
   font-size: var(--font-large-size);
   line-height: var(--font-large-line-height);
-  margin: 1rem 0 1rem;
+  font-family: var(--sans);
+  margin: 1.5rem 0 1rem;
 
   @media (--media-min-small) {
     font-size: var(--font-large-size);
@@ -142,7 +149,8 @@
 .responsiveTitle4 {
   font-size: var(--font-base-size);
   line-height: var(--font-base-line-height);
-  margin: 1rem 0 1rem;
+  font-family: var(--sans);
+  margin: 1.5rem 0 1rem;
 
   @media (--media-min-small) {
     font-size: var(--font-base-size);

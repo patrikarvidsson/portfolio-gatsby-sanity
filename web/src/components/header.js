@@ -3,7 +3,7 @@ import React from 'react'
 import Icon from './icons'
 import { cn } from '../lib/helpers'
 
-import logo from '../images/logo.black.svg'
+import logo from '../images/logo.flat.svg'
 import webring from '../images/icon.webring.svg'
 
 import styles from './header.module.css'

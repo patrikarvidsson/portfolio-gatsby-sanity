@@ -18,7 +18,20 @@ module.exports = {
         watchMode: true,
         overlayDrafts: true
       }
-    }
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Patrik Arvidsson`,
+        short_name: `Patrik Arvidsson`,
+        start_url: `/`,
+        background_color: `#000`,
+        theme_color: `#000`,
+        display: `standalone`,
+        icon: `src/images/logo.flat.svg`
+      }
+    },
+    'gatsby-plugin-offline'
   ]
 }
 

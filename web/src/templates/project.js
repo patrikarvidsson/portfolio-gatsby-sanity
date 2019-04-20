@@ -40,7 +40,16 @@ export const query = graphql`
           width
         }
         asset {
+          fluid(maxWidth: 1600, maxHeight: 800) {
+            ...GatsbySanityImageFluid
+          }
           _id
+          metadata {
+            lqip
+            dimensions {
+              aspectRatio
+            }
+          }
         }
         alt
       }

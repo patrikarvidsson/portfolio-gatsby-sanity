@@ -19,6 +19,7 @@ module.exports = {
         overlayDrafts: true
       }
     },
+    'gatsby-image',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

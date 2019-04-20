@@ -10,7 +10,8 @@
 .mainImage {
   position: relative;
   background: #eee;
-  padding-bottom: calc(9 / 16 * 100%);
+  background-size: cover;
+  max-height: 60vh;
 
   @nest & img {
     position: absolute;

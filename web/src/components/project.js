@@ -1,5 +1,6 @@
 import { format, distanceInWords, differenceInDays } from 'date-fns'
 import React from 'react'
+import Img from 'gatsby-image'
 import { Link } from 'gatsby'
 import { buildImageObj } from '../lib/helpers'
 import { imageUrlFor } from '../lib/image-url'
@@ -13,17 +14,8 @@ function Project (props) {
   const { _rawBody, title, categories, mainImage, members, publishedAt, relatedProjects } = props
   return (
     <article className={styles.root}>
-      {props.mainImage && mainImage.asset && (
-        <div className={styles.mainImage}>
-          <img
-            src={imageUrlFor(buildImageObj(mainImage))
-              .width(1200)
-              .height(Math.floor((9 / 16) * 1200))
-              .fit('crop')
-              .url()}
-            alt={mainImage.alt}
-          />
-        </div>
+      {props.mainImage && mainImage.asset && mainImage.asset.fluid && mainImage.asset.metadata && mainImage.asset.metadata.dimensions && (
+        <Img className={styles.mainImage} fluid={mainImage.asset.fluid} />
       )}
       <Container>
         <div className={styles.grid}>

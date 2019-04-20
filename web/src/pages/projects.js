@@ -20,6 +20,12 @@ export const query = graphql`
           id
           mainImage {
             asset {
+              metadata {
+                lqip
+                dimensions {
+                  aspectRatio
+                }
+              }
               _id
             }
             alt

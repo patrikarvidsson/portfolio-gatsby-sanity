@@ -33,9 +33,6 @@ const Header = ({ onHideNav, onShowNav, showNav, siteTitle }) => (
             <Link to='/blog/'>Blog</Link>
           </li>
           <li>
-            <Link to='/contact/'>Contact</Link>
-          </li>
-          <li>
             <a href="https://webring.xxiivv.com/">
               <img src={webring} alt="Webring" />
             </a>

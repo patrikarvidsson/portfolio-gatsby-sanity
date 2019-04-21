@@ -1,4 +1,5 @@
 import { Link } from 'gatsby'
+import Img from 'gatsby-image'
 import React from 'react'
 import { cn, buildImageObj } from '../lib/helpers'
 import { imageUrlFor } from '../lib/image-url'
@@ -11,14 +12,8 @@ function ProjectPreview (props) {
   return (
     <Link className={styles.root} to={`/projects/${props.slug.current}`}>
       <div className={styles.leadMediaThumb}>
-        {props.mainImage && props.mainImage.asset && (
-          <img
-            src={imageUrlFor(buildImageObj(props.mainImage))
-              .width(400)
-              .height(Math.floor((9 / 16) * 400))
-              .url()}
-            alt={props.mainImage.alt}
-          />
+        {props.mainImage && props.mainImage.asset && props.mainImage.asset.fluid && (
+          <Img fluid={props.mainImage.asset.fluid} alt={props.mainImage.alt} />
         )}
       </div>
       <h3 className={cn(responsiveTitle3, styles.title)}>{props.title}</h3>

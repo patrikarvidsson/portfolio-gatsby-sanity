@@ -20,11 +20,8 @@ export const query = graphql`
           id
           mainImage {
             asset {
-              metadata {
-                lqip
-                dimensions {
-                  aspectRatio
-                }
+              fluid(maxWidth: 300, maxHeight: 200) {
+                ...GatsbySanityImageFluid
               }
               _id
             }

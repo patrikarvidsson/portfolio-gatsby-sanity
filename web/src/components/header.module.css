@@ -102,8 +102,16 @@
       justify-content: flex-end;
     }
 
+    @nest & ul li {
+      display: flex;
+      align-items: center;
+    }
+
     @nest & ul li a {
       padding: 0.5rem 0.8rem;
+      display: flex;
+      align-items: center;
+      height: 100%;
     }
   }
 }

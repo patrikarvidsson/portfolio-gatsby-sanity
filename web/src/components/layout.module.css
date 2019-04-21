@@ -6,6 +6,7 @@
 
   @media (--media-min-medium) {
     margin: 3rem 0 6rem;
+    max-width: 840px;
 
     @nest & h2 {
       font-size: var(--font-title2-size);

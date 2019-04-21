@@ -12,7 +12,7 @@
   padding: 1em;
   display: flex;
 
-  @media (--media-min-small) {
+  @media (--media-min-extralarge) {
     padding: 2em 4em;
   }
 }

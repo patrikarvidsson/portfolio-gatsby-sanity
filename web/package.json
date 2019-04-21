@@ -26,11 +26,13 @@
     "gatsby-plugin-postcss": "^2.0.7",
     "gatsby-plugin-react-helmet": "^3.0.12",
     "gatsby-source-sanity": "^2.0.3",
+    "intersection-observer": "^0.5.1",
     "postcss-import": "^12.0.1",
     "postcss-preset-env": "^6.6.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "react-intersection-observer": "^8.22.6"
   },
   "devDependencies": {
     "eslint": "^5.16.0",

@@ -5,6 +5,7 @@ import BlogPostPreview from './blog-post-preview'
 import styles from './blog-post-preview-grid.module.css'
 
 function BlogPostPreviewGrid (props) {
+
   return (
     <div className={styles.root}>
       {props.title && (

@@ -9,11 +9,11 @@
 .wrapper {
   box-sizing: border-box;
   margin: 0 auto;
-  padding: 1em;
+  padding: 0.5em 1em;
   display: flex;
 
   @media (--media-min-extralarge) {
-    padding: 2em 4em;
+    padding: 1.2em 3em;
   }
 }
 

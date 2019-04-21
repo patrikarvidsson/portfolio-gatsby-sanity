@@ -6,7 +6,7 @@
   padding: 0 1.5em;
   margin: 0 auto;
 
-  @media (--media-min-small) {
+  @media (--media-min-large) {
     padding: 3em 2em;
   }
 }

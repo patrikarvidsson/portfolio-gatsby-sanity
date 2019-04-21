@@ -5,7 +5,7 @@
   margin: 1rem 0 3rem;
 
   @media (--media-min-medium) {
-    margin: 3rem 0 6rem;
+    margin: 1rem 0 6rem;
     max-width: 840px;
 
     @nest & h2 {

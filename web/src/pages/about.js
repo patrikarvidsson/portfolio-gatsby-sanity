@@ -9,6 +9,7 @@ import Layout from '../containers/layout'
 import { mapEdgesToNodes, filterOutDocsWithoutSlugs } from '../lib/helpers'
 
 import { responsiveTitle1 } from '../components/typography.module.css'
+import { thin } from '../components/container.module.css'
 
 export const query = graphql`
   query AboutPageQuery {
@@ -59,11 +60,13 @@ const AboutPage = props => {
     <Layout>
       <SEO title={page.title} />
       <Container>
-        <BlockContent blocks={page._rawBody || []} />
-        {personNodes &&
-          personNodes.length > 0 && (
-            <PeopleGrid items={personNodes} title="People" />
-          )}
+        <div className={thin}>
+          <BlockContent blocks={page._rawBody || []} />
+          {personNodes &&
+           personNodes.length > 0 && (
+             <PeopleGrid items={personNodes} title="People" />
+           )}
+        </div>
       </Container>
     </Layout>
   )

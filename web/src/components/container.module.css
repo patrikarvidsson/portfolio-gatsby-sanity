@@ -10,3 +10,7 @@
     padding: 3em 2em;
   }
 }
+
+.thin {
+  max-width: 800px;
+}

@@ -2,7 +2,7 @@
 @import '../styles/vars.css';
 
 .introductionSection {
-  margin: 1rem 0 4rem;
+  margin: 1rem 0 3rem;
 
   @media (--media-min-medium) {
     margin: 3rem 0 6rem;

@@ -1,0 +1,24 @@
+{
+  "private": false,
+  "name": "patrik-arvidsson",
+  "version": "1.0.0",
+  "author": "Patrik Arvidsson <hello@patrikarvidsson.com>",
+  "scripts": {
+    "clean": "lerna clean",
+    "deploy": "lerna run deploy",
+    "empty-cache": "rimraf web/.cache",
+    "init": "cd studio && sanity init && lerna run graphql-deploy",
+    "format": "lerna run format",
+    "graphql-deploy": "lerna run graphql-deploy",
+    "lint": "lerna run lint",
+    "now-deploy": "now && now alias",
+    "postinstall": "lerna bootstrap",
+    "sanity-deploy": "lerna run sanity-deploy",
+    "start": "lerna run empty-cache && lerna run start --parallel",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "lerna": "^3.13.1",
+    "rimraf": "^2.6.3"
+  }
+}

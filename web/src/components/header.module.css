@@ -9,11 +9,11 @@
 .wrapper {
   box-sizing: border-box;
   margin: 0 auto;
-  padding: 0.5em 1em;
+  padding: 0.8em 1em;
   display: flex;
 
   @media (--media-min-extralarge) {
-    padding: 1.2em 3em;
+    padding: 1.5em 3em;
   }
 }
 
@@ -23,7 +23,8 @@
   flex: 1;
 
   @nest & a {
-    display: inline-block;
+    display: flex;
+    align-items: center;
     padding: 0.5em;
     color: inherit;
     text-decoration: none;
@@ -32,6 +33,14 @@
       @nest &:hover {
         text-decoration: underline;
       }
+    }
+  }
+
+  @nest & a img {
+    width: 49px;
+
+    @media (--media-min-large) {
+      width: 56px;
     }
   }
 }

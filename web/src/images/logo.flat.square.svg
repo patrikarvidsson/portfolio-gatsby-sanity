@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg viewBox="0 0 45 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg viewBox="0 0 45 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
-    <title>Asset 1</title>
+    <title>logo-flat</title>
     <desc>Created with Sketch.</desc>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Artboard" transform="translate(-104.000000, -179.000000)" fill="#000000" fill-rule="nonzero">
+        <g id="Artboard" transform="translate(-104.000000, -175.000000)" fill="#000000" fill-rule="nonzero">
             <g id="logo-black-copy-2" transform="translate(104.000000, 175.000000)">
                 <g id="Asset-1" transform="translate(0.000000, 4.000000)">
                     <path d="M45.05,36.53 L45.05,36.54 L1.51483482,24.7947598 C1.4595412,24.7798423 1.40722145,24.7555361 1.36015854,24.7229018 C1.13323451,24.5655483 1.07683639,24.2540299 1.23418981,24.0271059 L4.94924976,18.6695079 C5.06964154,18.4958873 5.28616924,18.4166782 5.49017584,18.4716289 L29.43,24.92 L22.8732254,14.2732144 L18.6810608,20.1787109 L11.2557369,18.0568411 L23,0.713909657 L22.9997713,0.739229207 L23,0.715103149 L45.05,36.53 Z M4.76977539,27.6361237 L12.0242878,29.5392987 L7.20351356,36.3383467 C7.08143654,36.5105198 6.8643949,36.5874951 6.66111678,36.5307116 L0.669361965,34.8569791 C0.61732128,34.8424421 0.567980984,34.8195658 0.523260557,34.7892402 C0.294710949,34.6342574 0.235073319,34.3233429 0.390056183,34.0947933 L4.76977539,27.6361237 Z" id="Combined-Shape"></path>

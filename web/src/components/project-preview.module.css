@@ -1,3 +1,5 @@
+@import '../styles/vars.css';
+
 .root {
   display: block;
   color: inherit;
@@ -37,5 +39,17 @@
 
   @nest & strong {
     font-weight: 600;
+  }
+}
+
+.categories {
+  @nest & ul {
+    padding: 0;
+  }
+
+  @nest & ul li {
+    list-style-type: none;
+    font-weight: 700;
+    color: var(--color-red);
   }
 }

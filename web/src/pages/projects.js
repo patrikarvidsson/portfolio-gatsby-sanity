@@ -32,6 +32,10 @@ export const query = graphql`
           slug {
             current
           }
+          categories {
+            _id
+            title
+          }
         }
       }
     }

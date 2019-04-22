@@ -24,10 +24,7 @@ export const query = graphql`
       title
       _rawBody
     }
-    projects: allSanityProject(
-      limit: 6
-      sort: { fields: [publishedAt], order: DESC }
-    ) {
+    projects: allSanityProject(limit: 6, sort: { fields: [publishedAt], order: DESC }) {
       edges {
         node {
           id
@@ -69,10 +66,7 @@ export const query = graphql`
       }
     }
 
-    posts: allSanityPost(
-      limit: 6
-      sort: { fields: [publishedAt], order: DESC }
-    ) {
+    posts: allSanityPost(limit: 6, sort: { fields: [publishedAt], order: DESC }) {
       edges {
         node {
           id
@@ -125,8 +119,12 @@ const IndexPage = props => {
   }
 
   const site = (data || {}).site
-  const postNodes = (data || {}).posts ? mapEdgesToNodes(data.posts).filter(filterOutDocsWithoutSlugs) : []
-  const projectNodes = (data || {}).projects ? mapEdgesToNodes(data.projects).filter(filterOutDocsWithoutSlugs) : []
+  const postNodes = (data || {}).posts
+    ? mapEdgesToNodes(data.posts).filter(filterOutDocsWithoutSlugs)
+    : []
+  const projectNodes = (data || {}).projects
+    ? mapEdgesToNodes(data.projects).filter(filterOutDocsWithoutSlugs)
+    : []
   const page = data && data.page
 
   if (!site) {
@@ -140,7 +138,7 @@ const IndexPage = props => {
       <SEO title={site.title} description={site.description} keywords={site.keywords} />
       <Container>
         <h1 hidden>Welcome to {site.title}</h1>
-        
+
         <section className={introductionSection}>
           <h2>{page.title}</h2>
           <BlockContent blocks={page._rawBody || []} />

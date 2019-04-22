@@ -13,7 +13,7 @@ const Header = ({ onHideNav, onShowNav, showNav, siteTitle }) => (
     <div className={styles.wrapper}>
       <h1 className={styles.branding}>
         <Link to='/'>
-          <img src={logo} alt={siteTitle}/>
+          <img src={logo} alt={siteTitle} />
         </Link>
       </h1>
 
@@ -33,8 +33,8 @@ const Header = ({ onHideNav, onShowNav, showNav, siteTitle }) => (
             <Link to='/blog/'>Blog</Link>
           </li>
           <li>
-            <a href="https://webring.xxiivv.com/#random">
-              <img src={webring} alt="Webring" />
+            <a href='https://webring.xxiivv.com/#random'>
+              <img src={webring} alt='Webring' />
             </a>
           </li>
         </ul>

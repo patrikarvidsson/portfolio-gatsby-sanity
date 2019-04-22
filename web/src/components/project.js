@@ -14,7 +14,11 @@ function Project (props) {
   const { _rawBody, title, categories, mainImage, members, publishedAt, relatedProjects } = props
   return (
     <article className={styles.root}>
-      {props.mainImage && mainImage.asset && mainImage.asset.fluid && mainImage.asset.metadata && mainImage.asset.metadata.dimensions && (
+      {props.mainImage &&
+        mainImage.asset &&
+        mainImage.asset.fluid &&
+        mainImage.asset.metadata &&
+        mainImage.asset.metadata.dimensions && (
         <Img className={styles.mainImage} fluid={mainImage.asset.fluid} />
       )}
       <Container>

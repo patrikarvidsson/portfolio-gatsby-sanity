@@ -5,7 +5,6 @@ import ProjectPreview from './project-preview'
 import styles from './project-preview-grid.module.css'
 
 function ProjectPreviewGrid (props) {
-
   return (
     <div className={styles.root}>
       {props.title && (

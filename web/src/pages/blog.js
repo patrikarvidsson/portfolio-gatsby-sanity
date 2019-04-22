@@ -19,10 +19,7 @@ export const query = graphql`
       title
       _rawBody
     }
-    posts: allSanityPost(
-      limit: 12
-      sort: { fields: [publishedAt], order: DESC }
-    ) {
+    posts: allSanityPost(limit: 12, sort: { fields: [publishedAt], order: DESC }) {
       edges {
         node {
           id

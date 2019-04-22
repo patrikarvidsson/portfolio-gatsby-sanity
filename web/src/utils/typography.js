@@ -12,16 +12,16 @@ const typography = new Typography({
   overrideThemeStyles: ({ rhythm }, options, styles) => ({
     h2: {
       marginBottom: rhythm(1 / 3),
-      marginTop: rhythm(2),
+      marginTop: rhythm(2)
     },
     'h3,h4': {
       marginBottom: rhythm(2 / 3),
-      marginTop: rhythm(2 / 3),
+      marginTop: rhythm(2 / 3)
     },
     p: {
-      marginBottom: rhythm(1 / 2),
-    },
-  }),
+      marginBottom: rhythm(1 / 2)
+    }
+  })
 })
 
 export default typography

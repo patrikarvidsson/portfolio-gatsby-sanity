@@ -32,6 +32,13 @@ module.exports = {
         icon: `src/images/logo.flat.square.svg`
       }
     },
+    `gatsby-plugin-robots-txt`,
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://sanity.patrikarvidsson.com`,
+      },
+    },
     {
       resolve: `gatsby-plugin-netlify`,
       options: {

@@ -11,7 +11,7 @@
   position: relative;
   background: #eee;
   background-size: cover;
-  max-height: 60vh;
+  height: 60vh;
 
   @nest & img {
     position: absolute;
@@ -22,6 +22,10 @@
     vertical-align: top;
     object-fit: cover;
   }
+
+  @media (--media-min-large) {
+    height: 70vh;
+  }
 }
 
 .grid {
@@ -30,11 +34,40 @@
   grid-column-gap: 2em;
 
   @media (--media-min-medium) {
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  @media (--media-min-extralarge) {
+    max-width: 960px;
+    margin: 0 auto;
   }
 }
 
 .mainContent {
+  margin: 1.5em 0;
+
+  @media (--media-min-large) {
+    @nest & p {
+      padding: 0 4rem;
+    }
+
+    @nest & h1 {
+      padding: 0 4rem;
+    }
+
+    @nest & h2 {
+      padding: 0 4rem;
+    }
+
+    @nest & h3 {
+      padding: 0 4rem;
+    }
+
+    @nest & h4 {
+      padding: 0 4rem;
+    }
+  }
+
   @nest & a {
     color: var(--color-accent);
 
@@ -43,6 +76,10 @@
         color: inherit;
       }
     }
+  }
+
+  @media (--media-min-large) {
+    margin: 0;
   }
 }
 

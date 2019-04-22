@@ -29,11 +29,33 @@
   grid-column-gap: 2em;
 
   @media (--media-min-medium) {
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 1fr;
   }
 }
 
 .mainContent {
+  @media (--media-min-large) {
+    @nest & p {
+      padding: 0 4rem;
+    }
+
+    @nest & h1 {
+      padding: 0 4rem;
+    }
+
+    @nest & h2 {
+      padding: 0 4rem;
+    }
+
+    @nest & h3 {
+      padding: 0 4rem;
+    }
+
+    @nest & h4 {
+      padding: 0 4rem;
+    }
+  }
+
   @nest & a {
     color: var(--color-accent);
 

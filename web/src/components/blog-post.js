@@ -30,6 +30,7 @@ function BlogPost (props) {
             <h1 className={styles.title}>{title}</h1>
             {_rawBody && <BlockContent blocks={_rawBody} />}
           </div>
+          {/*
           <aside className={styles.metaContent}>
             {publishedAt && (
               <div className={styles.publishedAt}>
@@ -50,6 +51,7 @@ function BlogPost (props) {
               </div>
             )}
           </aside>
+           */}
         </div>
       </Container>
     </article>

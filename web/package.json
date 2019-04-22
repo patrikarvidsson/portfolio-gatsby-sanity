@@ -21,6 +21,7 @@
     "gatsby": "^2.3.25",
     "gatsby-image": "^2.0.39",
     "gatsby-plugin-canonical-urls": "^2.0.12",
+    "gatsby-plugin-google-tagmanager": "^2.0.13",
     "gatsby-plugin-manifest": "^2.0.29",
     "gatsby-plugin-netlify": "^2.0.14",
     "gatsby-plugin-offline": "^2.0.25",

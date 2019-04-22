@@ -35,6 +35,31 @@ module.exports = {
         icon: `src/images/logo.flat.square.svg`
       }
     },
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        output: `/sitemap.xml`,
+        // Exclude specific pages or groups of pages using glob parameters
+        // See: https://github.com/isaacs/minimatch
+        // The example below will exclude the single `path/to/page` and all routes beginning with `category`
+        exclude: ['/category/*', `/tag/*`],
+        query: `
+        {
+          site {
+            siteMetadata {
+              siteUrl
+            }
+          }
+          allSitePage {
+            edges {
+              node {
+                path
+              }
+            }
+          }
+        }`
+      }
+    },
     `gatsby-plugin-robots-txt`,
     {
       resolve: `gatsby-plugin-canonical-urls`,

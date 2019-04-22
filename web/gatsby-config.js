@@ -5,7 +5,7 @@ const {
 
 module.exports = {
   siteMetadata: {
-    siteUrl: 'https://sanity.patrikarvidsson.com'
+    siteUrl: 'https://www.patrikarvidsson.com'
   },
   plugins: [
     'gatsby-plugin-postcss',
@@ -64,7 +64,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        siteUrl: `https://sanity.patrikarvidsson.com`
+        siteUrl: `https://patrikarvidsson.com`
       }
     },
     {

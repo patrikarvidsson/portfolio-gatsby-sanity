@@ -51,6 +51,24 @@ export default () =>
                 )
                 .icon(FaFileO),
               S.listItem()
+                .title('Projects')
+                .child(
+                  S.editor()
+                    .id('projectsPage')
+                    .schemaType('page')
+                    .documentId('projects')
+                )
+                .icon(FaFileO),
+              S.listItem()
+                .title('Blog')
+                .child(
+                  S.editor()
+                    .id('blogPage')
+                    .schemaType('page')
+                    .documentId('blog')
+                )
+                .icon(FaFileO),
+              S.listItem()
                 .title('About')
                 .child(
                   S.editor()

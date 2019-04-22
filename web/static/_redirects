@@ -1,0 +1,5 @@
+/index.php                          /
+/index.html                         /
+/journal/wint-ux-study              /blog/2018/08/wint-ux-study
+/journal/jotex-campaign-generator   /blog/2017/12/jotex-campaign-generator
+/portfolio/*                        /projects/:splat

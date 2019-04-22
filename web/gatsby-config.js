@@ -4,6 +4,9 @@ const {
 } = requireConfig('../studio/sanity.json')
 
 module.exports = {
+  siteMetadata: {
+    siteUrl: 'https://sanity.patrikarvidsson.com'
+  },
   plugins: [
     'gatsby-plugin-postcss',
     'gatsby-plugin-react-helmet',
@@ -37,7 +40,7 @@ module.exports = {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
         siteUrl: `https://sanity.patrikarvidsson.com`,
-      },
+      }
     },
     {
       resolve: `gatsby-plugin-netlify`,

@@ -11,7 +11,7 @@ import styles from './header.module.css'
 const Header = ({ onHideNav, onShowNav, showNav, siteTitle }) => (
   <div className={styles.root}>
     <div className={styles.wrapper}>
-      <div hidden className={styles.branding}>
+      <div className={styles.branding}>
         <Link to='/'>
           <img src={logo} alt={siteTitle} />
         </Link>

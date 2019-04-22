@@ -54,6 +54,15 @@
     @nest & h4 {
       padding: 0 4rem;
     }
+
+    @nest & ul {
+      padding: 0 6rem;
+      font-size: var(--font-large-size);
+    }
+
+    @nest & ul li {
+      padding: 0 0 0.5rem 0;
+    }
   }
 
   @nest & a {

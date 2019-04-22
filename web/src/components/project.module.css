@@ -66,15 +66,14 @@
     @nest & h4 {
       padding: 0 4rem;
     }
-  }
 
-  @nest & a {
-    color: var(--color-accent);
+    @nest & ul {
+      padding: 0 6rem;
+      font-size: var(--font-large-size);
+    }
 
-    @media (hover: hover) {
-      @nest &:hover {
-        color: inherit;
-      }
+    @nest & ul li {
+      padding: 0 0 0.5rem 0;
     }
   }
 

@@ -21,7 +21,8 @@
 .title {
   @media (hover: hover) {
     @nest .root:hover & {
-      text-decoration: underline;
+      text-decoration: none;
+      color: #000;
     }
   }
 }

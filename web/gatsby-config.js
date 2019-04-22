@@ -39,7 +39,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        siteUrl: `https://sanity.patrikarvidsson.com`,
+        siteUrl: `https://sanity.patrikarvidsson.com`
       }
     },
     {

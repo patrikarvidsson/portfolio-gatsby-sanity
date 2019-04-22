@@ -30,6 +30,11 @@ export default {
       type: 'blockText'
     },
     {
+      name: 'hideFromStart',
+      title: 'Hide project from start page',
+      type: 'boolean'
+    },
+    {
       name: 'members',
       title: 'Members',
       type: 'array',

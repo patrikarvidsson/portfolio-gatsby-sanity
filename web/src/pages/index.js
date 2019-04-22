@@ -24,7 +24,11 @@ export const query = graphql`
       title
       _rawBody
     }
-    projects: allSanityProject(limit: 6, sort: { fields: [publishedAt], order: DESC }) {
+    projects: allSanityProject(
+      limit: 6
+      sort: { fields: [publishedAt], order: DESC }
+      filter: { hideFromStart: { ne: true } }
+    ) {
       edges {
         node {
           id

@@ -2,22 +2,6 @@
 
 @font-face {
   font-display: swap;
-  font-family: "arno-pro-display";
-  src: url("../utils/fonts/arno-pro-display.woff2") format("woff2"), url("../utils/fonts/arno-pro-display.woff") format("woff"), url("../utils/fonts/arno-pro-display.otf") format("opentype");
-  font-style: normal;
-  font-weight: 400;
-}
-
-@font-face {
-  font-display: swap;
-  font-family: "arno-pro-display";
-  src: url("../utils/fonts/arno-pro-bold-display.woff2") format("woff2"), url("../utils/fonts/arno-pro-bold-display.woff") format("woff"), url("../utils/fonts/arno-pro-bold-display.otf") format("opentype");
-  font-style: normal;
-  font-weight: 700;
-}
-
-@font-face {
-  font-display: swap;
   font-family: "source-sans-pro";
   src: url("../utils/fonts/SourceSansPro-Regular.woff2") format("woff2"), url("../utils/fonts/SourceSansPro-Regular.woff") format("woff"), url("../utils/fonts/SourceSansPro-Regular.otf") format("opentype");
   font-style: normal;

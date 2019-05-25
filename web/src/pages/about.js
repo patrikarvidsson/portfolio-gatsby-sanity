@@ -8,7 +8,6 @@ import SEO from '../components/seo'
 import Layout from '../containers/layout'
 import { mapEdgesToNodes, filterOutDocsWithoutSlugs } from '../lib/helpers'
 
-import { responsiveTitle1 } from '../components/typography.module.css'
 import { thin } from '../components/container.module.css'
 
 export const query = graphql`
@@ -48,8 +47,7 @@ const AboutPage = props => {
   }
 
   const page = data && data.page
-  const personNodes =
-    data && data.people && mapEdgesToNodes(data.people).filter(filterOutDocsWithoutSlugs)
+  const personNodes = data && data.people && mapEdgesToNodes(data.people).filter(filterOutDocsWithoutSlugs)
 
   if (!page) {
     throw new Error(
@@ -63,9 +61,7 @@ const AboutPage = props => {
       <Container>
         <div className={thin}>
           <BlockContent blocks={page._rawBody || []} />
-          {personNodes && personNodes.length > 0 && (
-            <PeopleGrid items={personNodes} title='People' />
-          )}
+          {personNodes && personNodes.length > 0 && <PeopleGrid items={personNodes} title='People' />}
         </div>
       </Container>
     </Layout>

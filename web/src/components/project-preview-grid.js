@@ -9,11 +9,7 @@ function ProjectPreviewGrid (props) {
     <div className={styles.root}>
       {props.title && (
         <h2 className={styles.headline}>
-          {props.browseMoreHref ? (
-            <Link to={props.browseMoreHref}>{props.title}</Link>
-          ) : (
-            props.title
-          )}
+          {props.browseMoreHref ? <Link to={props.browseMoreHref}>{props.title}</Link> : props.title}
         </h2>
       )}
       <ul className={styles.grid}>

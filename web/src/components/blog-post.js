@@ -1,15 +1,13 @@
-import { format, distanceInWords, differenceInDays } from 'date-fns'
 import React from 'react'
 import { buildImageObj } from '../lib/helpers'
 import { imageUrlFor } from '../lib/image-url'
 import BlockContent from './block-content'
 import Container from './container'
-import RoleList from './role-list'
 
 import styles from './blog-post.module.css'
 
 function BlogPost (props) {
-  const { _rawBody, authors, categories, title, mainImage, publishedAt } = props
+  const { _rawBody, title, mainImage } = props
   return (
     <article className={styles.root}>
       {mainImage && mainImage.asset && (

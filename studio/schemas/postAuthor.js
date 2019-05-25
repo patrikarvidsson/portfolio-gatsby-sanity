@@ -16,11 +16,7 @@ export default {
       of: [{ type: 'string' }],
       options: {
         layout: 'radio',
-        list: [
-          { title: 'Illustration', value: 'illustration' },
-          { title: 'Text', value: 'text' },
-          { title: 'Editor', value: 'editor' }
-        ]
+        list: [{ title: 'Illustration', value: 'illustration' }, { title: 'Text', value: 'text' }, { title: 'Editor', value: 'editor' }]
       }
     }
   ],

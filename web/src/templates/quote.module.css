@@ -1,0 +1,72 @@
+.container {
+  max-width: 740px;
+  margin: 0 auto;
+  padding: 4rem 0;
+}
+
+header {
+  @nest & img {
+    width: 49px;
+    margin-bottom: 20px;
+
+    @media (--media-min-large) {
+      width: 56px;
+    }
+  }
+}
+
+section {
+  margin: 2.4rem 0;
+
+  @nest & h2 {
+    margin-bottom: 0;
+  }
+}
+
+.grid {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 4fr 1fr 1fr 1fr;
+  grid-row-gap: 3rem;
+
+  @nest & div {
+    padding: 6px 16px;
+    margin: 4px 0;
+    text-align: center;
+  }
+
+  @nest & div:not(.bold) {
+    background-color: #F7F7F7;
+  }
+
+  @nest & div:first-of-type {
+    text-align: left;
+    border-left: 4px #000 solid;
+  }
+
+  @nest & div:last-of-type {
+    text-align: right;
+  }
+
+  @nest & div.bold:first-of-type {
+    border-left: 0;
+    padding-left: 0;
+  }
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.noMargins {
+  @nest & * {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+p {
+  margin: 0.7em 0;
+}

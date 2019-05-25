@@ -83,7 +83,42 @@ async function createProjectPages (graphql, actions, reporter) {
   })
 }
 
+async function createQuotePages (graphql, actions, reporter) {
+  const { createPage, createPageDependency } = actions
+  const result = await graphql(`
+    {
+      allSanityQuote(filter: { id: { ne: null } }) {
+        edges {
+          node {
+            id
+          }
+        }
+      }
+    }
+  `)
+
+  if (result.errors) throw result.errors
+
+  const projectEdges = (result.data.allSanityQuote || {}).edges || []
+
+  projectEdges.forEach(edge => {
+    const id = edge.node.id
+    const path = `/quotes/${id}/`
+
+    reporter.info(`Creating quote: ${path}`)
+
+    createPage({
+      path,
+      component: require.resolve('./src/templates/quote.js'),
+      context: { id }
+    })
+
+    createPageDependency({ path, nodeId: id })
+  })
+}
+
 exports.createPages = async ({ graphql, actions, reporter }) => {
   await createBlogPostPages(graphql, actions, reporter)
   await createProjectPages(graphql, actions, reporter)
+  await createQuotePages(graphql, actions, reporter)
 }

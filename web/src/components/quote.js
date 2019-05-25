@@ -18,7 +18,7 @@ function Quote (props) {
 
   return (
     <div className={styles.container}>
-      <header>
+      <header className={styles.header}>
         <img className={styles.logo} src={logo} alt='Quote' />
         <div className={styles.noMargins}>
           <p className={styles.bold}>Quote #</p>
@@ -26,17 +26,17 @@ function Quote (props) {
         </div>
       </header>
 
-      <section>
+      <section className={styles.section}>
         <h2 className={styles.quoteSectionTitle}>Specifications (1.1)</h2>
-        <ReactMarkdown source={props.specification} />
+        <ReactMarkdown className={styles.paragraph} source={props.specification} />
       </section>
 
-      <section>
+      <section className={styles.section}>
         <h2 className={styles.quoteSectionTitle}>Validity (1.2)</h2>
-        <ReactMarkdown source={props.validity} />
+        <ReactMarkdown className={styles.paragraph} source={props.validity} />
       </section>
 
-      <section>
+      <section className={styles.section}>
         <div className={styles.grid}>
           <div className={styles.bold}>Description</div>
           <div className={styles.bold}>Amount</div>
@@ -53,15 +53,15 @@ function Quote (props) {
         ))}
       </section>
 
-      <section>
+      <section className={styles.section}>
         <div>Total: {total} SEK</div>
         <div>Tax: {tax} SEK</div>
         <div>Amount to pay: {tax + total} SEK</div>
       </section>
 
-      <section>
+      <section className={styles.section}>
         <h2>Contact information</h2>
-        <p>
+        <p className={styles.paragraph}>
           For questions or concerns you are welcome to call me at 073-514 60 10 or send an email to{' '}
           <a href='mailto:patrik@patrikarvidsson.com'>patrik@patrikarvidsson.com</a> and I'll get back to you as soon as
           possible.

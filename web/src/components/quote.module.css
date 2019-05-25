@@ -4,7 +4,7 @@
   padding: 4rem 0;
 }
 
-header {
+.header {
   @nest & img {
     width: 49px;
     margin-bottom: 20px;
@@ -15,7 +15,7 @@ header {
   }
 }
 
-section {
+.section {
   margin: 2.4rem 0;
 
   @nest & .quoteSectionTitle {
@@ -67,6 +67,10 @@ section {
   }
 }
 
-p {
+.paragraph {
   margin: 0.7em 0;
+
+  @nest & p {
+    margin: 0.7em 0;
+  }
 }

@@ -18,7 +18,7 @@ header {
 section {
   margin: 2.4rem 0;
 
-  @nest & h2 {
+  @nest & .quoteSectionTitle {
     margin-bottom: 0;
   }
 }

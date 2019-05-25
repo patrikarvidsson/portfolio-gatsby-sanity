@@ -87,10 +87,13 @@ async function createQuotePages (graphql, actions, reporter) {
   const { createPage, createPageDependency } = actions
   const result = await graphql(`
     {
-      allSanityQuote(filter: { id: { ne: null } }) {
+      allSanityQuote(filter: { slug: { current: { ne: null } } }) {
         edges {
           node {
             id
+            slug {
+              current
+            }
           }
         }
       }
@@ -103,7 +106,8 @@ async function createQuotePages (graphql, actions, reporter) {
 
   projectEdges.forEach(edge => {
     const id = edge.node.id
-    const path = `/quotes/${id}/`
+    const slug = edge.node.slug.current
+    const path = `/quote/${slug}/`
 
     reporter.info(`Creating quote: ${path}`)
 

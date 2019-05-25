@@ -73,7 +73,9 @@ export default {
     prepare ({ title = 'No title', publishedAt, image }) {
       return {
         title,
-        subtitle: publishedAt ? new Date(publishedAt).toLocaleDateString() : 'Missing publishing date',
+        subtitle: publishedAt
+          ? new Date(publishedAt).toLocaleDateString()
+          : 'Missing publishing date',
         media: image
       }
     }

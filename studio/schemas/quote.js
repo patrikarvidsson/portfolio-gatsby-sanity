@@ -1,3 +1,17 @@
+import sanityClient from 'part:@sanity/base/client'
+import slugify from 'uuid/v4'
+
+const uuidv4 = require('uuid/v4')
+
+function uuidSlugifier (input, type) {
+  const slug = uuidv4()
+  const query = 'count(*[_type=="quote" && slug.current == $slug]{_id})'
+  const params = { slug: slug }
+  return sanityClient.fetch(query, params).then(count => {
+    return `${slug}`
+  })
+}
+
 export default {
   name: 'quote',
   title: 'Quote',
@@ -7,6 +21,15 @@ export default {
       name: 'quoteNumber',
       title: 'Quote Number',
       type: 'string'
+    },
+    {
+      name: 'slug',
+      title: 'Slug',
+      type: 'slug',
+      options: {
+        source: 'quoteNumber',
+        slugify: uuidSlugifier
+      }
     },
     {
       name: 'client',

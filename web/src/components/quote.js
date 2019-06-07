@@ -1,20 +1,23 @@
 import React from 'react'
+import _ from 'lodash'
+
 import logo from '../images/logo.flat.svg'
 
 import styles from './quote.module.css'
 
 const ReactMarkdown = require('react-markdown')
 
-function Quote (props) {
-  const { quoteNumber, specification, validity, taskRow } = props
+function calculateTotal (taskRow) {
+  return _.sum(_.map(taskRow, i => i.fee * i.hours))
+}
 
-  var total =
-    props.taskRow[0].fee * props.taskRow[0].hours +
-    props.taskRow[1].fee * props.taskRow[1].hours +
-    props.taskRow[2].fee * props.taskRow[2].hours +
-    props.taskRow[3].fee * props.taskRow[3].hours
-  var taxNumber = 0.25
-  var tax = taxNumber * total
+function calculateTax (total) {
+  return 0.25 * total
+}
+
+function Quote ({ quoteNumber, specification, validity, taskRow }) {
+  const total = calculateTotal(taskRow)
+  const tax = calculateTax(total)
 
   return (
     <div className={styles.container}>
@@ -22,18 +25,18 @@ function Quote (props) {
         <img className={styles.logo} src={logo} alt='Quote' />
         <div className={styles.noMargins}>
           <p className={styles.bold}>Quote #</p>
-          <p>{props.quoteNumber}</p>
+          <p>{quoteNumber}</p>
         </div>
       </header>
 
       <section className={styles.section}>
         <h2 className={styles.quoteSectionTitle}>Specifications (1.1)</h2>
-        <ReactMarkdown className={styles.paragraph} source={props.specification} />
+        <ReactMarkdown className={styles.paragraph} source={specification} />
       </section>
 
       <section className={styles.section}>
         <h2 className={styles.quoteSectionTitle}>Validity (1.2)</h2>
-        <ReactMarkdown className={styles.paragraph} source={props.validity} />
+        <ReactMarkdown className={styles.paragraph} source={validity} />
       </section>
 
       <section className={styles.section}>
@@ -43,7 +46,7 @@ function Quote (props) {
           <div className={styles.bold}>Fee</div>
           <div className={styles.bold}>Total</div>
         </div>
-        {props.taskRow.map(quote => (
+        {taskRow.map(quote => (
           <div className={styles.grid} key={quote.description}>
             <div>{quote.description}</div>
             <div>{quote.hours}</div>

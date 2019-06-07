@@ -123,12 +123,8 @@ const IndexPage = props => {
   }
 
   const site = (data || {}).site
-  const postNodes = (data || {}).posts
-    ? mapEdgesToNodes(data.posts).filter(filterOutDocsWithoutSlugs)
-    : []
-  const projectNodes = (data || {}).projects
-    ? mapEdgesToNodes(data.projects).filter(filterOutDocsWithoutSlugs)
-    : []
+  const postNodes = (data || {}).posts ? mapEdgesToNodes(data.posts).filter(filterOutDocsWithoutSlugs) : []
+  const projectNodes = (data || {}).projects ? mapEdgesToNodes(data.projects).filter(filterOutDocsWithoutSlugs) : []
   const page = data && data.page
 
   if (!site) {
@@ -149,19 +145,9 @@ const IndexPage = props => {
         </section>
 
         {projectNodes && (
-          <ProjectPreviewGrid
-            title='Latest projects'
-            nodes={projectNodes}
-            browseMoreHref='/projects/'
-          />
+          <ProjectPreviewGrid title='Latest projects' nodes={projectNodes} browseMoreHref='/projects/' />
         )}
-        {postNodes && (
-          <BlogPostPreviewGrid
-            title='Latest blog posts'
-            nodes={postNodes}
-            browseMoreHref='/blog/'
-          />
-        )}
+        {postNodes && <BlogPostPreviewGrid title='Latest blog posts' nodes={postNodes} browseMoreHref='/blog/' />}
       </Container>
     </Layout>
   )

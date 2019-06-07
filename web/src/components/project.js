@@ -1,26 +1,19 @@
-import { format, distanceInWords, differenceInDays } from 'date-fns'
 import React from 'react'
 import Img from 'gatsby-image'
-import { Link } from 'gatsby'
-import { buildImageObj } from '../lib/helpers'
-import { imageUrlFor } from '../lib/image-url'
 import BlockContent from './block-content'
 import Container from './container'
-import RoleList from './role-list'
 
 import styles from './project.module.css'
 
 function Project (props) {
-  const { _rawBody, title, categories, mainImage, members, publishedAt, relatedProjects } = props
+  const { _rawBody, title, mainImage } = props
   return (
     <article className={styles.root}>
       {props.mainImage &&
         mainImage.asset &&
         mainImage.asset.fluid &&
         mainImage.asset.metadata &&
-        mainImage.asset.metadata.dimensions && (
-        <Img className={styles.mainImage} fluid={mainImage.asset.fluid} />
-      )}
+        mainImage.asset.metadata.dimensions && <Img className={styles.mainImage} fluid={mainImage.asset.fluid} />}
       <Container>
         <div className={styles.grid}>
           <div className={styles.mainContent}>

@@ -3,7 +3,16 @@ import MdBusiness from 'react-icons/lib/md/business'
 import MdSettings from 'react-icons/lib/md/settings'
 import FaFileO from 'react-icons/lib/fa/file-o'
 
-const hiddenTypes = ['category', 'companyInfo', 'page', 'person', 'post', 'project', 'siteSettings']
+const hiddenTypes = [
+  'category',
+  'companyInfo',
+  'page',
+  'person',
+  'post',
+  'quote',
+  'project',
+  'siteSettings'
+]
 
 export default () =>
   S.list()
@@ -28,13 +37,17 @@ export default () =>
         )
         .icon(MdBusiness),
       S.listItem()
-        .title('Projects')
+        .title('Portfolio')
         .schemaType('project')
         .child(S.documentTypeList('project')),
       S.listItem()
-        .title('Blog posts')
+        .title('Blog')
         .schemaType('post')
         .child(S.documentTypeList('post').title('Blog posts')),
+      S.listItem()
+        .title('Quotes')
+        .schemaType('quote')
+        .child(S.documentTypeList('quote').title('Quotes')),
       S.listItem()
         .title('Pages')
         .child(

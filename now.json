@@ -1,12 +1,24 @@
 {
   "version": 2,
-  "name": "example-company-website-gatsby-sanity-combo",
+  "name": "Patrik Arvidsson",
+  "alias": ["www.patrikarvidsson.com"],
+  "regions": ["arn1", "dub1", "cdg1"],
   "builds": [
+    { "src": "api/go/*.go", "use": "@now/go" },
+    { "src": "web/package.json", "use": "@now/static-build", "config": {"distDir": "public"} },
+    { "src": "studio/package.json", "use": "@now/static-build" }
+  ],
+  "routes": [
+    { "src": "^/studio/static/(.*)", "dest": "/studio/static/$1" },
+    { "src": "^/studio/(.*)", "dest": "/studio/index.html" },
+    { "src": "^/api/(.*)", "dest": "/api/$1" },
     {
-      "src": "web/package.json",
-      "use": "@now/static-build",
-      "config": { "distDir": "web/public" }
+      "src": "^/(.*)",
+      "dest": "/web/$1",
+      "headers": { "cache-control": "public, max-age=31536000, immutable" }
     }
   ],
-  "alias": ["example-company-website-gatsby-sanity-combo.now.sh"]
+  "env": {
+    "SANITY_DEPLOY_STUDIO_TOKEN": "@portfolio-sanity-studio-token"
+  }
 }

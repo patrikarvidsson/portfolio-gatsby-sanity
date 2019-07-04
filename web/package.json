@@ -11,7 +11,9 @@
     "now-build": "npm run build",
     "start": "npm run develop",
     "format": "prettier-eslint --write \"**/*.js\"",
-    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "@sanity/block-content-to-react": "^2.0.6",
@@ -39,7 +41,8 @@
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
     "react-intersection-observer": "^8.23.0",
-    "react-markdown": "^4.1.0"
+    "react-markdown": "^4.1.0",
+    "snyk": "^1.192.0"
   },
   "devDependencies": {
     "eslint": "^6.0.1",
@@ -51,5 +54,6 @@
     "eslint-plugin-react": "^7.14.2",
     "eslint-plugin-standard": "^4.0.0",
     "prettier-eslint-cli": "^5.0.0"
-  }
+  },
+  "snyk": true
 }

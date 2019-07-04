@@ -5,7 +5,6 @@
   "author": "Sanity <hello@sanity.io>",
   "scripts": {
     "deploy": "npm run graphql-deploy && npm run sanity-deploy",
-    "now-build": "sanity build",
     "format": "prettier-eslint --write \"**/*.js\" \"!node_modules/**\"",
     "graphql-deploy": "sanity graphql deploy --playground",
     "sanity-deploy": "sanity deploy",
@@ -14,13 +13,13 @@
     "test": "sanity check"
   },
   "dependencies": {
-    "@sanity/base": "^0.141.5",
-    "@sanity/components": "^0.141.5",
-    "@sanity/core": "^0.141.5",
-    "@sanity/dashboard": "^0.141.5",
-    "@sanity/default-layout": "^0.141.5",
-    "@sanity/default-login": "^0.141.5",
-    "@sanity/desk-tool": "^0.141.5",
+    "@sanity/base": "^0.141.1",
+    "@sanity/components": "^0.141.1",
+    "@sanity/core": "^0.141.1",
+    "@sanity/dashboard": "^0.141.1",
+    "@sanity/default-layout": "^0.141.1",
+    "@sanity/default-login": "^0.141.1",
+    "@sanity/desk-tool": "^0.141.2",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -28,7 +27,6 @@
     "uuid": "^3.3.2"
   },
   "devDependencies": {
-    "@sanity/cli": "^0.141.5",
     "eslint": "^6.0.1",
     "eslint-config-standard": "^12.0.0",
     "eslint-config-standard-react": "^7.0.2",

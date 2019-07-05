@@ -10,7 +10,9 @@
     "sanity-deploy": "sanity deploy",
     "lint": "eslint .",
     "start": "sanity start",
-    "test": "sanity check"
+    "test": "sanity check",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "@sanity/base": "^0.141.5",
@@ -24,7 +26,8 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "sanity-plugin-markdown": "^1.0.1",
-    "uuid": "^3.3.2"
+    "uuid": "^3.3.2",
+    "snyk": "^1.192.2"
   },
   "devDependencies": {
     "eslint": "^6.0.1",
@@ -36,5 +39,6 @@
     "eslint-plugin-react": "^7.14.2",
     "eslint-plugin-standard": "^4.0.0",
     "prettier-eslint-cli": "^5.0.0"
-  }
+  },
+  "snyk": true
 }

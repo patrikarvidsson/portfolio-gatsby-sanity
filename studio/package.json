@@ -15,19 +15,19 @@
     "prepare": "npm run snyk-protect"
   },
   "dependencies": {
-    "@sanity/base": "^0.141.5",
-    "@sanity/components": "^0.141.5",
-    "@sanity/core": "^0.141.5",
-    "@sanity/dashboard": "^0.141.5",
-    "@sanity/default-layout": "^0.141.5",
+    "@sanity/base": "^0.141.6",
+    "@sanity/components": "^0.141.6",
+    "@sanity/core": "^0.141.6",
+    "@sanity/dashboard": "^0.141.6",
+    "@sanity/default-layout": "^0.141.6",
     "@sanity/default-login": "^0.141.5",
-    "@sanity/desk-tool": "^0.141.5",
+    "@sanity/desk-tool": "^0.141.6",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "sanity-plugin-markdown": "^1.0.1",
     "uuid": "^3.3.2",
-    "snyk": "^1.192.2"
+    "snyk": "^1.192.3"
   },
   "devDependencies": {
     "eslint": "^6.0.1",

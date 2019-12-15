@@ -10,35 +10,31 @@
     "sanity-deploy": "sanity deploy",
     "lint": "eslint .",
     "start": "sanity start",
-    "test": "sanity check",
-    "snyk-protect": "snyk protect",
-    "prepare": "npm run snyk-protect"
+    "test": "sanity check"
   },
   "dependencies": {
-    "@sanity/base": "^0.141.6",
-    "@sanity/components": "^0.141.6",
-    "@sanity/core": "^0.141.6",
-    "@sanity/dashboard": "^0.141.6",
-    "@sanity/default-layout": "^0.141.6",
-    "@sanity/default-login": "^0.141.5",
-    "@sanity/desk-tool": "^0.141.6",
+    "@sanity/base": "^0.147.3",
+    "@sanity/components": "^0.147.3",
+    "@sanity/core": "^0.147.3",
+    "@sanity/dashboard": "^0.147.3",
+    "@sanity/default-layout": "^0.147.4",
+    "@sanity/default-login": "^0.147.0",
+    "@sanity/desk-tool": "^0.147.3",
     "prop-types": "^15.7.2",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
     "sanity-plugin-markdown": "^1.0.1",
-    "uuid": "^3.3.2",
-    "snyk": "^1.192.3"
+    "uuid": "^3.3.3"
   },
   "devDependencies": {
-    "eslint": "^6.0.1",
-    "eslint-config-standard": "^12.0.0",
-    "eslint-config-standard-react": "^7.0.2",
-    "eslint-plugin-import": "^2.18.0",
-    "eslint-plugin-node": "^9.1.0",
+    "eslint": "^6.7.2",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-config-standard-react": "^9.2.0",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-react": "^7.14.2",
-    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-standard": "^4.0.1",
     "prettier-eslint-cli": "^5.0.0"
-  },
-  "snyk": true
+  }
 }

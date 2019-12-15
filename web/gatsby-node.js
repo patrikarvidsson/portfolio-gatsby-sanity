@@ -6,7 +6,7 @@ const { format } = require('date-fns')
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-async function createBlogPostPages (graphql, actions, reporter) {
+async function createBlogPostPages(graphql, actions, reporter) {
   const { createPage, createPageDependency } = actions
   const result = await graphql(`
     {
@@ -30,7 +30,7 @@ async function createBlogPostPages (graphql, actions, reporter) {
 
   postEdges.forEach((edge, index) => {
     const { id, slug = {}, publishedAt } = edge.node
-    const dateSegment = format(publishedAt, 'YYYY/MM')
+    const dateSegment = format(publishedAt, 'yyyy/MM')
     const path = `/blog/${dateSegment}/${slug.current}/`
 
     reporter.info(`Creating blog post page: ${path}`)
@@ -45,7 +45,7 @@ async function createBlogPostPages (graphql, actions, reporter) {
   })
 }
 
-async function createProjectPages (graphql, actions, reporter) {
+async function createProjectPages(graphql, actions, reporter) {
   const { createPage, createPageDependency } = actions
   const result = await graphql(`
     {
@@ -83,46 +83,7 @@ async function createProjectPages (graphql, actions, reporter) {
   })
 }
 
-async function createQuotePages (graphql, actions, reporter) {
-  const { createPage, createPageDependency } = actions
-  const result = await graphql(`
-    {
-      allSanityQuote(filter: { slug: { current: { ne: null } } }) {
-        edges {
-          node {
-            id
-            slug {
-              current
-            }
-          }
-        }
-      }
-    }
-  `)
-
-  if (result.errors) throw result.errors
-
-  const projectEdges = (result.data.allSanityQuote || {}).edges || []
-
-  projectEdges.forEach(edge => {
-    const id = edge.node.id
-    const slug = edge.node.slug.current
-    const path = `/quote/${slug}/`
-
-    reporter.info(`Creating quote: ${path}`)
-
-    createPage({
-      path,
-      component: require.resolve('./src/templates/quote.js'),
-      context: { id }
-    })
-
-    createPageDependency({ path, nodeId: id })
-  })
-}
-
 exports.createPages = async ({ graphql, actions, reporter }) => {
   await createBlogPostPages(graphql, actions, reporter)
   await createProjectPages(graphql, actions, reporter)
-  await createQuotePages(graphql, actions, reporter)
 }
